@@ -13,6 +13,6 @@ RUN pip install git+https://github.com/JGCRI/demeter.git
 USER jovyan
 
 # Copy notebook into the container
-COPY Demeter_2024_GCAM_annual_meeting.ipynb /home/jovyan/
+COPY notebooks /home/jovyan/notebooks
 
 
