@@ -9,6 +9,8 @@ RUN pip install --no-cache-dir pandas numpy matplotlib seaborn
 # Install the Demeter package from GitHub
 RUN pip install git+https://github.com/JGCRI/demeter.git
 
+RUN pip install numpy==1.26.4
+
 # Switch back to the regular user
 USER jovyan
 
