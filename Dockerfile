@@ -17,3 +17,4 @@ USER jovyan
 # Copy notebook and example into the container
 COPY notebooks /home/jovyan/notebooks
 COPY example /home/jovyan/example
+RUN chmod -R a+w /home/jovyan/example
