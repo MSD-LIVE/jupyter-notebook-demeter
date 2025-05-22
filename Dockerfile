@@ -14,7 +14,7 @@ RUN pip install numpy==1.26.4
 # Switch back to the regular user
 USER jovyan
 
-# Copy notebook into the container
+
+# Copy notebook and example into the container
 COPY notebooks /home/jovyan/notebooks
-
-
+COPY example /home/jovyan/example
