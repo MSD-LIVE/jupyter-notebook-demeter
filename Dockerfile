@@ -20,6 +20,8 @@ RUN pip install git+https://github.com/JGCRI/demeter.git
 # click-default-group-wheel-1.2.3 configobj-5.0.9 
 # demeter-2.0.1 gcamreader-1.4.0 idna-2.7 lxml-6.0.2 netcdf4-1.7.4 packaging-26.0 requests-2.20.1 urllib3-1.24.3 xarray-2026.2.0
 
+# Switch back to the regular user
+# USER jovyan cannot switch to jovyan, will break things in aws
 
 RUN pip install "numpy==1.26.4" 
 RUN pip install --ignore-installed --no-deps "requests>=2.31" "urllib3>=1.26.0" "idna>=2.8"
