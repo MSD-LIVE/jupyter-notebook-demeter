@@ -1,14 +1,17 @@
-# This docker compose file can be used to start up a statemodify notebook locally
+# This docker compose file can be used to start up a demeter notebook locally
 # for testing.
 services:
   notebook:
-    container_name: <<blank>>-notebook
+    container_name: demeter-notebook
     build:
       context: .
       dockerfile: Dockerfile
-    image: ghcr.io/msd-live/jupyter/<<blank>>-notebook:latest
+    image: ghcr.io/msd-live/jupyter/demeter-notebook:latest
     ports:
-      - "8888:8888"
+      - 8888:8888
     volumes:
       - ./data:/home/jovyan/data
-      - ./notebooks:/home/jovyan/notebooks
+      # - ./notebooks:/home/jovyan/notebooks
+    environment:
+      - DATA_DIR=/home/jovyan/data
+        #- JUPYTER_PORT=8889
